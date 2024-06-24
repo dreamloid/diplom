@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReviewsActivity"
+    android:background="@color/dirtyGreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+
+        android:background="@color/ligthGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:background="@drawable/btn_nobackground"
+            android:drawableStart="@drawable/ic_arrow3"
+
+            android:onClick="onBackButtonClick"
+
+            android:layout_marginStart="12dp"
+            android:paddingStart="5dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Отзывы"
+            android:textColor="@color/darkGreen50"
+            android:textSize="16dp"
+            android:textStyle="bold"
+
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+
+        android:background="@drawable/frame_rectangle25botton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2">
+
+        <FrameLayout
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="6dp"
+
+            android:background="@drawable/frame_rectangle15">
+
+            <ImageView
+                android:id="@+id/imageViewProduct"
+                android:layout_width="99dp"
+                android:layout_height="99dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/png_big_ceftil" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textViewProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="6dp"
+
+            android:text="NameProduct"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textViewVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="32dp"
+
+            android:text="100ml"
+            android:textColor="@color/black75"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="58dp"
+
+            android:text="Price"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addCardButton"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+
+            android:layout_marginStart="340dp"
+            android:layout_marginTop="109dp"
+
+            android:background="@drawable/btn_darkgreen_round"
+
+            android:drawableStart="@drawable/ic_plus2"
+            android:paddingStart="12dp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deleteCardButton"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+
+            android:layout_marginStart="240dp"
+            android:layout_marginTop="109dp"
+
+            android:background="@drawable/btn_darkgreen_round"
+
+            android:drawableStart="@drawable/ic_minus2"
+            android:paddingStart="12dp"/>
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="118dp"
+            android:layout_marginStart="294dp"
+
+            android:textStyle="bold"
+            android:text="1 шт"
+            android:textColor="@color/black"
+            android:textSize="14dp"/>
+        <TextView
+            android:id="@+id/textViewCountReviews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="126dp"
+
+            android:text="10 отзывов"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout4">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/reviewRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerificationActivity"
+    android:background="@drawable/png_background_sign_and_reg">
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="188dp"
+        android:layout_marginEnd="47dp"
+
+        android:textAlignment="center"
+        android:textColor="@color/darkGreen"
+        android:textSize="16dp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/firstCharacter"
+        android:layout_width="33dp"
+        android:layout_height="45dp"
+
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="256dp"
+
+        android:ems="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:textColor="@color/darkGreen"
+        android:textStyle="bold"
+
+        android:maxLength="1"
+
+        android:background="@drawable/et_verification_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/secondCharacter"
+        android:layout_width="33dp"
+        android:layout_height="45dp"
+
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="219dp"
+
+        android:ems="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:textColor="@color/darkGreen"
+        android:textStyle="bold"
+
+        android:maxLength="1"
+
+        android:background="@drawable/et_verification_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/thirdCharacter"
+        android:layout_width="33dp"
+        android:layout_height="45dp"
+
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="185dp"
+
+        android:ems="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:textColor="@color/darkGreen"
+        android:textStyle="bold"
+
+        android:maxLength="1"
+
+        android:background="@drawable/et_verification_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/fourthCharacter"
+        android:layout_width="33dp"
+        android:layout_height="45dp"
+
+        android:layout_marginStart="182dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="145dp"
+
+        android:ems="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:textColor="@color/darkGreen"
+        android:textStyle="bold"
+
+        android:maxLength="1"
+
+        android:background="@drawable/et_verification_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/fifthCharacter"
+        android:layout_width="33dp"
+        android:layout_height="45dp"
+
+        android:layout_marginStart="219dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="108dp"
+
+        android:ems="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:textColor="@color/darkGreen"
+        android:textStyle="bold"
+
+        android:maxLength="1"
+
+        android:background="@drawable/et_verification_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/sixthCharacter"
+        android:layout_width="33dp"
+        android:layout_height="45dp"
+
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="71dp"
+
+        android:ems="1"
+        android:inputType="number"
+        android:gravity="center"
+        android:textSize="24dp"
+        android:textColor="@color/darkGreen"
+        android:textStyle="bold"
+
+        android:maxLength="1"
+
+        android:background="@drawable/et_verification_code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sendCodeAgainButton"
+        android:onClick="onSendCodeAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="343dp"
+        android:layout_marginEnd="47dp"
+
+        android:text="Отправить код повторно"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        android:textColor="@color/darkGreen"
+        android:background="@drawable/nobackground_btn"
+        android:textStyle="bold"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/registrationButton"
+        android:layout_width="325dp"
+        android:layout_height="52dp"
+
+        android:visibility="gone"
+
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="593dp"
+        android:layout_marginEnd="17dp"
+
+        android:background="@drawable/darkgreen_btn"
+        android:text="Зарегистрироваться"
+        android:textAllCaps="true"
+        android:textColor="@color/ligthGreen"
+        android:textSize="18dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

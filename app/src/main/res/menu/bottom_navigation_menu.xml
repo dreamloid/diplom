@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_catalog"
+        android:title="Каталог"
+        android:icon="@drawable/ic_catalog" />
+    <item
+        android:id="@+id/menu_cart"
+        android:title="Корзина"
+        android:icon="@drawable/ic_cart" />
+    <item
+        android:id="@+id/menu_likes"
+        android:title="Любимые"
+        android:icon="@drawable/ic_like" />
+    <item
+        android:id="@+id/menu_profile"
+        android:title="Профиль"
+        android:icon="@drawable/ic_profile" />
+</menu>

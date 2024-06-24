@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderRegistrationActivity"
+    android:background="@color/dirtyGreen">
+
+    <FrameLayout
+        android:id="@+id/frameLayout9"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:background="@color/ligthGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exitButton"
+            android:onClick="onExitButtonClick"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+            android:background="@drawable/btn_nobackground"
+
+            android:drawableStart="@drawable/ic_cross"
+            android:padding="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="61dp"
+            android:layout_marginTop="18dp"
+
+            android:text="Оформление заказа"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="59dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/firstDeliveryAdressFrameLayout"
+
+                android:visibility="visible"
+
+                android:paddingBottom="10dp"
+
+                android:background="@color/ligthGreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+
+                    android:layout_marginTop="16dp"
+                    android:text="Это ваш первый заказ, запишите адресс"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/streetEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="53dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:backgroundTint="@color/black75"
+
+                    android:hint="Улица"
+
+                    android:inputType="text"
+                    android:paddingStart="3dp"
+
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black75"
+
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/houseEditText"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="24dp"
+
+                    android:backgroundTint="@color/black75"
+
+                    android:hint="Дом"
+
+                    android:inputType="number"
+                    android:paddingStart="3dp"
+
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black75"
+
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/streetEditText" />
+
+                <EditText
+                    android:id="@+id/floorEditText"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+
+                    android:backgroundTint="@color/black75"
+
+                    android:hint="Этаж"
+
+                    android:inputType="number"
+                    android:paddingStart="3dp"
+
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black75"
+
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toEndOf="@+id/houseEditText"
+                    app:layout_constraintTop_toBottomOf="@+id/streetEditText" />
+
+                <EditText
+                    android:id="@+id/flatEditText"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="16dp"
+
+                    android:backgroundTint="@color/black75"
+
+                    android:hint="Квартира"
+
+                    android:inputType="number"
+                    android:paddingStart="3dp"
+
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black75"
+
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toEndOf="@+id/floorEditText"
+                    app:layout_constraintTop_toBottomOf="@+id/streetEditText" />
+
+                <EditText
+                    android:id="@+id/doorphoneEditText"
+                    android:layout_width="83dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+
+                    android:backgroundTint="@color/black75"
+
+                    android:hint="Домофон"
+
+                    android:inputType="text"
+                    android:paddingStart="3dp"
+
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black75"
+                    android:textSize="14dp"
+                    app:layout_constraintStart_toEndOf="@+id/flatEditText"
+                    app:layout_constraintTop_toBottomOf="@+id/streetEditText" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <FrameLayout
+                android:id="@+id/mainChoiceDeliveryAdressFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="16dp"
+
+                android:background="@color/ligthGreen">
+            <FrameLayout
+                android:id="@+id/deliveryFrameLayout"
+                android:onClick="onChoiceDeliveryFrameLayoutClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+
+                android:background="@drawable/frame_rectangle15_ligthgreen30">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/choiceDeliveryTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="58dp"
+                        android:layout_marginBottom="16dp"
+
+                        android:text="Выберите адрес доставки"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/arrowChoiceDelivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="22dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="22dp"
+
+                        android:src="@drawable/ic_arrow2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <FrameLayout
+                    android:id="@+id/selectedChoiceDeliveryFrameLayout"
+
+                    android:visibility="gone"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="58dp"
+                        android:layout_marginTop="9dp"
+
+                        android:textSize="12dp"
+                        android:textColor="@color/black75"
+                        android:text="Адрес доставки"/>
+                    <TextView
+                        android:id="@+id/selectedChoiceDeliveryTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="26dp"
+                        android:layout_marginStart="58dp"
+                        android:layout_marginBottom="9dp"
+
+                        android:text="street, house, flat"
+                        android:textColor="@color/black75"
+                        android:textSize="14dp"/>
+                </FrameLayout>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/choiceDeliveryFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:visibility="gone"
+
+                android:layout_marginTop="66dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+
+                android:background="@drawable/frame_rectangle7botton_dirtygreen">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/choiceDeliveryRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"/>
+            </FrameLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/frame_rectangle25botton">
+                <EditText
+                    android:id="@+id/commentEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:backgroundTint="@color/black75"
+
+                    android:inputType="text"
+
+                    android:hint="Комментарий"
+                    android:paddingStart="3dp"
+
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black75"
+                    android:textSize="14dp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/contactlessDeliveryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="275dp"
+                    android:layout_marginTop="49dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="4dp"
+
+                    app:thumbTint="@drawable/switch_thumb"
+                    app:trackTint="@drawable/switch_track"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="63dp"
+
+                    android:text="Бесконтактная доставка"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+
+                android:background="@drawable/frame_rectangle14">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+
+                    android:text="Доставка заказа"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dayAndTimeRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="45dp"/>
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:paddingBottom="15dp"
+
+                android:layout_marginTop="8dp"
+                android:background="@drawable/frame_rectangle14">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+
+                    android:text="Сборка заказа"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="44dp"
+
+                    android:layout_height="wrap_content"
+                    android:text="Стоимость сборки"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="44dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:text="бесплатно"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/overFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/frame_rectangle15_ligthgreen30"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:onClick="onChoiceOverFrameLayoutClick"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/choiceOverTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="16dp"
+                            android:layout_marginStart="58dp"
+                            android:layout_marginBottom="16dp"
+
+                            android:text="Если товар закончился?"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/arrowChoiceOver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginBottom="22dp"
+
+                            android:src="@drawable/ic_arrow2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <FrameLayout
+                        android:id="@+id/selectedChoiceOverFrameLayout"
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+
+                            android:src="@drawable/ic_phone2" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="58dp"
+                            android:layout_marginTop="9dp"
+
+                            android:text="Если товар закончился?"
+                            android:textColor="@color/black75"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/selectedChoiceOverTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="58dp"
+                            android:layout_marginTop="26dp"
+                            android:layout_marginBottom="9dp"
+
+                            android:text="Позвонить мне. Подобрать замену"
+                            android:textColor="@color/black75"
+                            android:textSize="14dp" />
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/choiceOverFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+
+                    android:background="@drawable/frame_rectangle7botton_dirtygreen"
+
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/overFrameLayout">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/choiceOverRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+
+                android:background="@drawable/frame_rectangle14">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+
+                    android:text="Контакты"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="42dp"
+
+                    android:text="Телефон"
+                    android:textColor="@color/black75"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/telephoneEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="65dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+
+                    android:backgroundTint="@color/black75"
+
+                    android:inputType="text"
+
+                    android:hint="Введите ваш номер"
+                    android:paddingStart="3dp"
+
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black75"
+
+                    android:textSize="14dp" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+
+                android:background="@drawable/frame_rectangle_14top_lightgreen">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/giftsFrameLayout"
+                    android:onClick="onGiftsFrameLayoutClick"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:background="@drawable/frame_rectangle15_ligthgreen30">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="16dp"
+
+                        android:src="@drawable/ic_gift"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="58dp"
+
+                        android:text="Промокод"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/arrowChoiceGifts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="22dp"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginEnd="16dp"
+
+                        android:src="@drawable/ic_arrow2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <FrameLayout
+                    android:id="@+id/choiceGiftsFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:visibility="gone"
+
+                    android:layout_marginTop="67dp"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="4dp"
+
+                    android:background="@drawable/frame_rectangle7botton_dirtygreen">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+
+                        android:textSize="14dp"
+                        android:textColor="@color/black75"
+                        android:text="У вас нету активных промокодов"/>
+                </FrameLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ligthGreen"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:id="@+id/bankCardFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/frame_rectangle15_ligthgreen30"
+
+                    android:onClick="onBankCardFrameLayoutClick">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/choiceBankCardTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="58dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+
+                            android:text="Способ оплаты"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/arrowChoiceBankCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="22dp"
+                            android:layout_marginBottom="22dp"
+                            android:layout_marginEnd="16dp"
+
+                            android:src="@drawable/ic_arrow2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <FrameLayout
+                        android:id="@+id/selectedBankCardFrameLayout"
+
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="59dp"
+                            android:layout_marginTop="8dp"
+
+                            android:text="Способ оплаты"
+                            android:textColor="@color/black75"
+                            android:textSize="12dp" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="7dp"
+
+                            android:background="@drawable/frame_rectangle15">
+
+                            <ImageView
+                                android:id="@+id/systemBankCardImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_master" />
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/numberTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="59dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_marginBottom="11dp"
+
+                            android:text="1234 1234 1234 1234"
+                            android:textColor="@color/black75"
+                            android:textSize="14dp" />
+                    </FrameLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/choiceBankCardFrameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="35dp"
+
+                    android:layout_marginTop="71dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/frame_rectangle7botton_dirtygreen"
+
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/choiceBankCardRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginBottom="4dp"
+
+                        android:nestedScrollingEnabled="false" />
+                </FrameLayout>
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@drawable/frame_rectangle_14botton_lightgreen">
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="2dp"
+
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/view_dashed_line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+
+                    android:text="Итого"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+                <TextView
+                    android:id="@+id/totalPriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="18dp"
+
+                    android:text="price"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="24dp"
+                android:text="Нажимая на кнопку, вы соглашаетесь с правилами \nработы сервиса"
+                android:textAlignment="center"
+                android:textColor="@color/black75"
+                android:textSize="12dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/payButton"
+                android:onClick="onPayButtonClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="84dp"
+
+                android:background="@drawable/darkgreen_btn"
+                android:text="Оплатить"
+                android:textColor="@color/white"
+
+                android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

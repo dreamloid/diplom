@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBankCardActivity"
+    android:background="@color/dirtyGreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/TitleFrameLayout"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="@color/ligthGreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+
+            android:text="Новый адрес доставки"
+            android:textColor="@color/darkGreen50"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/exitButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_nobackground"
+
+            android:layout_marginStart="12dp"
+
+            android:drawableStart="@drawable/ic_cross"
+            android:onClick="onExitButtonClick"
+            android:paddingStart="7dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/firstDeliveryAdressFrameLayout"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/frame_rectangle25botton"
+        android:paddingBottom="10dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/TitleFrameLayout">
+
+        <EditText
+            android:id="@+id/streetEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+
+            android:backgroundTint="@color/black75"
+
+            android:hint="Улица"
+
+            android:inputType="text"
+            android:paddingStart="3dp"
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/black75"
+
+            android:textSize="14dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/houseEditText"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="24dp"
+
+            android:backgroundTint="@color/black75"
+
+            android:hint="Дом"
+
+            android:inputType="number"
+            android:paddingStart="3dp"
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/black75"
+
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/streetEditText" />
+
+        <EditText
+            android:id="@+id/floorEditText"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+
+            android:backgroundTint="@color/black75"
+
+            android:hint="Этаж"
+
+            android:inputType="number"
+            android:paddingStart="3dp"
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/black75"
+
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/houseEditText"
+            app:layout_constraintTop_toBottomOf="@+id/streetEditText" />
+
+        <EditText
+            android:id="@+id/flatEditText"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+
+            android:backgroundTint="@color/black75"
+
+            android:hint="Квартира"
+
+            android:inputType="number"
+            android:paddingStart="3dp"
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/black75"
+
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/floorEditText"
+            app:layout_constraintTop_toBottomOf="@+id/streetEditText" />
+
+        <EditText
+            android:id="@+id/doorphoneEditText"
+            android:layout_width="83dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+
+            android:backgroundTint="@color/black75"
+
+            android:hint="Домофон"
+
+            android:inputType="text"
+            android:paddingStart="3dp"
+
+            android:textColor="@color/black"
+            android:textColorHint="@color/black75"
+            android:textSize="14dp"
+            app:layout_constraintStart_toEndOf="@+id/flatEditText"
+            app:layout_constraintTop_toBottomOf="@+id/streetEditText" />
+
+        <EditText
+            android:id="@+id/commentEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginStart="16dp"
+
+            android:layout_marginTop="24dp"
+
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+
+            android:backgroundTint="@color/black75"
+            android:hint="Комментарий"
+            android:inputType="text"
+            android:paddingStart="3dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black75"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/houseEditText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/AddBankCard"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="18dp"
+
+        android:background="@drawable/darkgreen_btn"
+        android:onClick="onAddCardButtonClick"
+        android:text="Сохранить"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstDeliveryAdressFrameLayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ligthGreen">#9DC87F</color>
+    <color name="darkGreen">#0C4831</color>
+    <color name="darkGreen50">#558858</color>
+    <color name="dirtyGreen">#6D8C58</color>
+    <color name="dirtyGreen50">#37462C</color>
+    <color name="darkGreen80">#1F5639</color>
+    <color name="red">#BD2748</color>
+    <color name="black50">#808080</color>
+    <color name="seafoamGreen">#85A398</color>
+    <color name="dirtyGray">#808080</color>
+    <color name="oliveGreen">#4F6440</color>
+    <color name="coniferousGreen">#37462C</color>
+    <color name="black75">#273220</color>
+    <color name="ligthGreen30">#7C9E64</color>
+</resources>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/FrameLayout"
+
+        android:layout_width="165dp"
+        android:layout_height="277dp"
+
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+
+        android:background="@drawable/frame_rectangle15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewProduct"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/png_big_ceftil" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="168dp"
+            android:layout_marginEnd="12dp"
+
+            android:textStyle="bold"
+            android:text="Наименование"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/textViewProductVolume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="198dp"
+            android:layout_marginEnd="8dp"
+
+            android:text="123"
+            android:textColor="@color/black50"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="217dp"
+            android:layout_marginEnd="8dp"
+
+            android:text="123456789"
+            android:textColor="@color/darkGreen"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewTitleEng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textViewID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="gone" />
+        <FrameLayout
+            android:id="@+id/firstProductFrameLayout"
+
+            android:visibility="visible"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="234dp">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonAddCart"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="121dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/btn_nobackground_with_border_round_darkgreen"
+                android:drawableStart="@drawable/ic_plus3"
+                android:paddingStart="12dp" />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/addMoreProductFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="visible"
+
+            android:layout_marginTop="234dp">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addProduct"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="121dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/btn_nobackground_with_border_round_darkgreen"
+                android:drawableStart="@drawable/ic_plus3"
+                android:paddingStart="13dp" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/deleteProduct"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="7dp"
+                android:background="@drawable/btn_nobackground_with_border_round_darkgreen"
+                android:drawableStart="@drawable/ic_minus"
+                android:paddingStart="12dp" />
+            <TextView
+                android:id="@+id/quantityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="9dp"
+
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:text="1 шт"/>
+        </FrameLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

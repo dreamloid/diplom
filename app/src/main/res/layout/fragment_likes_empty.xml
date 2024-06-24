@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LikesFragment"
+    android:background="@color/dirtyGreen">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
+
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="347dp"
+
+        android:src="@drawable/png_like_man"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="413dp"
+        android:layout_marginBottom="296dp"
+
+        android:text="Ваши покупки \nи любимые товары"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textAlignment="center"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+        android:layout_marginTop="464dp"
+        android:layout_marginBottom="245dp"
+
+        android:text="Появятся тут, если нажать на сердечко \nна карточке товара или купить что-нибуть"
+        android:textSize="14dp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/catalogButton"
+        android:layout_width="330dp"
+        android:layout_height="53dp"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="164dp"
+
+        android:text="Заглянуть в каталог"
+        android:textAllCaps="false"
+        android:textColor="@color/dirtyGreen"
+        android:textSize="13dp"
+        android:textStyle="bold"
+        android:background="@drawable/darkgreen_btn"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

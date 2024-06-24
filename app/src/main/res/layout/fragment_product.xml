@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductFragment"
+    android:background="@color/dirtyGreen">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/TitleFrame"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:background="@color/ligthGreen">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ArrowButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/btn_nobackground"
+                    android:drawableStart="@drawable/ic_arrow3"
+                    android:paddingStart="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewIdProduct"
+                    android:layout_width="wrap_content"
+android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:text="IDProduct"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ArrowButton"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewIdCategory"
+                    android:layout_width="wrap_content"
+android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:text="IDCategory"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/likeButton"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/likeButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/btn_nobackground"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ProductFrame"
+                android:layout_width="390dp"
+
+
+                android:layout_height="443dp"
+                android:background="@drawable/frame_rectangle25botton">
+
+                <ImageView
+                    android:id="@+id/productImageView"
+                    android:layout_width="325dp"
+                    android:layout_height="325dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@tools:sample/avatars" />
+
+
+                <TextView
+                    android:id="@+id/priceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="16dp"
+
+                    android:paddingBottom="16dp"
+
+                    android:text="2000 Р"
+                    android:textColor="@color/darkGreen"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleEngTextView" />
+
+                <TextView
+                    android:id="@+id/volumeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+
+                    android:paddingBottom="16dp"
+
+                    android:text="100 ml"
+                    android:textColor="@color/darkGreen"
+                    android:textSize="16dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/titleEngTextView" />
+
+                <TextView
+                    android:id="@+id/titleEngTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="10dp"
+
+                    android:text="Name product"
+                    android:textColor="@color/darkGreen"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productImageView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="12dp"
+                android:text="Похожие"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/similarRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/DescriptionFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/DescriptionTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Описание"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/descriptionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="26dp"
+                    android:text="Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla, Bla-Bla-Bla,"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/DescriptionTitleTextView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/reviewFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="84dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+
+                    android:layout_marginTop="10dp"
+                    android:text="Отзывы"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/numberFeedbackTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="7 отзывов"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    app:layout_constraintEnd_toStartOf="@+id/reviewButton"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/reviewButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="26dp"
+                    android:background="@drawable/btn_nobackground"
+                    android:drawableStart="@drawable/ic_arrow4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="29dp"
+                    android:src="@drawable/ic_feedback"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+                <TextView
+                    android:id="@+id/avgRatin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="7dp"
+                    android:text="4,7"
+                    android:textColor="@color/black"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/imageView19"
+                    app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+                <TextView
+                    android:id="@+id/numberFeedback2TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="7 оценок"
+                    android:textColor="@color/coniferousGreen"
+                    android:textSize="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView19"
+                    app:layout_constraintTop_toBottomOf="@+id/avgRatin" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="26dp"
+                    android:background="@drawable/frame_rectangle15"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView19">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/clientNameTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="14dp"
+
+                            android:text="Buyer"
+                            android:textColor="@color/black"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/starImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="32dp"
+                            android:src="@drawable/ic_star_count_5"
+                            app:layout_constraintEnd_toStartOf="@+id/dateTextView"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/dateTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+            android:visibility="gone"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:paddingEnd="14dp"
+                            android:text="date"
+                            android:textColor="@color/black50"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <FrameLayout
+                            android:id="@+id/frameLayout20"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="14dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/clientNameTextView">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Плюсы"
+                                android:textColor="@color/black50"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/plusTextView"
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="16dp"
+                                android:text="plus plus plus"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:id="@+id/frameLayout21"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="14dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/frameLayout20">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Минусы"
+                                android:textColor="@color/black50"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/minusTextView"
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="16dp"
+                                android:text="minus minus minus"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="14dp"
+                            android:paddingBottom="14dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/frameLayout21">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Комментарий"
+                                android:textColor="@color/black50"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/commentEditText"
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginTop="16dp"
+                                android:text="comment comment comment"
+                                android:textColor="@color/black"
+                                android:textSize="14dp" />
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/addToCartFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/frame_rectangle8_darkgreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/price2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="137dp"
+            android:layout_marginTop="19dp"
+
+            android:text="totalPrice2"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="194dp"
+            android:layout_marginTop="15dp"
+
+            android:src="@drawable/ic_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="211dp"
+            android:layout_marginTop="18dp"
+
+            android:text="Купить"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/addToCartMoreFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/frame_rectangle_8_ligthgreen_with_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/totalPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="18dp"
+
+            android:textSize="14dp"
+            android:textColor="@color/darkGreen"
+            android:text="totalPrice"
+            android:textStyle="bold"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deleteCartButton"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="216dp"
+
+            android:drawableStart="@drawable/ic_minus2"
+            android:paddingStart="11dp"
+            android:background="@drawable/btn_darkgreen_round"/>
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="18dp"
+
+            android:textStyle="bold"
+            android:text="1 шт"
+            android:textColor="@color/darkGreen"
+            android:textSize="14dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addMoreCartButton"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="316dp"
+
+            android:drawableStart="@drawable/ic_plus2"
+            android:paddingStart="11dp"
+            android:background="@drawable/btn_darkgreen_round"/>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

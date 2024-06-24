@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReviewActivity"
+    android:background="@color/dirtyGreen">
+
+    <TextView
+        android:id="@+id/orderIdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:visibility="gone"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="100dp"
+
+        android:textColor="@color/red"
+        android:text="orderId"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/productIdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:visibility="gone"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="150dp"
+
+        android:textColor="@color/red"
+        android:text="productId"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/starCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:visibility="gone"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="300dp"
+
+        android:textColor="@color/red"
+        android:text="selectedStar"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/exitButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+
+                android:background="@drawable/btn_ligthgreen_round"
+
+                android:drawableStart="@drawable/ic_cross"
+                android:onClick="onExitButtonClick"
+
+                android:paddingStart="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frameLayout8"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="71dp"
+
+                    android:background="@drawable/frame_rectangle14">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="91dp"
+
+                        android:background="@drawable/frame_rectangle15">
+
+                        <ImageView
+                            android:id="@+id/productImageView"
+                            android:layout_width="222dp"
+                            android:layout_height="222dp"
+
+                            android:layout_margin="16dp"
+
+                            android:src="@drawable/png_big_ceftil" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="286dp">
+
+                        <ImageView
+                            android:id="@+id/star1ImageView"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+
+                            android:src="@drawable/ic_star_dirtygreen" />
+
+                        <ImageView
+                            android:id="@+id/star2ImageView"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+
+                            android:layout_marginStart="55dp"
+
+                            android:src="@drawable/ic_star_dirtygreen" />
+
+                        <ImageView
+                            android:id="@+id/star3ImageView"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+
+                            android:layout_marginStart="105dp"
+
+                            android:src="@drawable/ic_star_dirtygreen" />
+
+                        <ImageView
+                            android:id="@+id/star4ImageView"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+
+                            android:layout_marginStart="155dp"
+
+                            android:src="@drawable/ic_star_dirtygreen" />
+
+                        <ImageView
+                            android:id="@+id/star5ImageView"
+                            android:layout_width="38dp"
+                            android:layout_height="38dp"
+
+                            android:layout_marginStart="205dp"
+
+                            android:src="@drawable/ic_star_dirtygreen" />
+                    </FrameLayout>
+                </FrameLayout>
+
+                <EditText
+                    android:id="@+id/degnitiesEditText"
+                    android:layout_width="323dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:background="@drawable/et_review"
+
+                    android:hint="Достоинства"
+                    android:maxLength="75"
+
+                    android:padding="16dp"
+
+                    android:textColor="@color/black"
+
+                    android:textColorHint="@color/black50"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/disadvantagesEditText"
+                    android:layout_width="323dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:background="@drawable/et_review"
+
+                    android:hint="Недостатки"
+                    android:maxLength="75"
+
+                    android:padding="16dp"
+
+                    android:textColor="@color/black"
+
+                    android:textColorHint="@color/black50"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/commentEditText"
+                    android:layout_width="323dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+
+                    android:background="@drawable/et_review"
+
+                    android:hint="Комментарий"
+                    android:maxLength="150"
+
+                    android:padding="16dp"
+
+                    android:textColor="@color/black"
+
+                    android:textColorHint="@color/black50"
+                    android:textSize="14dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/sendReviewButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="45dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@drawable/darkgreen_btn"
+
+                    android:onClick="onSendReviewButtonClick"
+
+                    android:text="Отправить отзыв"
+                    android:textAllCaps="false"
+                    android:textColor="@color/ligthGreen"
+                    android:textSize="14dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
